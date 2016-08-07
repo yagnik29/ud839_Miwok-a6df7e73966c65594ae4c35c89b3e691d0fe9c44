@@ -8,31 +8,43 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-    /**
-    * Created by yagnik on 28-Jul-16.
-    */
-public class WordAdapter extends ArrayAdapter<Word>{
+/**
+ * Created by yagnik on 28-Jul-16.
+ */
+public class WordAdapter extends ArrayAdapter<Word> {
     /**
      * This is our own custom constructor (it does not mirror a superclass constructor).
      * The context is used to inflate the layout file, and the list is the data we want
      * to populate into the lists.
      *
-     * @param numbersActivity   used to inflate the layout file.
-     * @param words             A list of word objects to display in a list
-    * */
+     * @param numbersActivity used to inflate the layout file.
+     * @param words           A list of word objects to display in a list
+     */
 
     public WordAdapter(NumbersActivity numbersActivity, ArrayList<Word> words) {
         super(numbersActivity, 0, words);
     }
 
+    public WordAdapter(ColorsActivity colorsActivity, ArrayList<Word> words) {
+        super(colorsActivity, 0, words);
+    }
+
+    public WordAdapter(FamilyActivity familyActivity, ArrayList<Word> words) {
+        super(familyActivity, 0, words);
+    }
+
+    public WordAdapter(PhrasesActivity phrasesActivity, ArrayList<Word> words) {
+        super(phrasesActivity,0,words);
+    }
+
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position     The position in the list of data that should be displayed in the
-     *                     list item view.
-     * @param convertView   The recycled view to populate.
-     * @param parent        The parent ViewGroup that is used for inflation.
-     * @return  The View for the position in the AdapterView.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
+     * @param convertView The recycled view to populate.
+     * @param parent      The parent ViewGroup that is used for inflation.
+     * @return The View for the position in the AdapterView.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
