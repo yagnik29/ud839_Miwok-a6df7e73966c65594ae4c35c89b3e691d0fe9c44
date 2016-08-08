@@ -17,15 +17,12 @@ public class FamilyActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<Word>();
 
         //words.add("one");
-        words.add(new Word("father", "lutti"));
-        words.add(new Word("mother", "otiiko"));
-        words.add(new Word("son", "tolookosu"));
-        words.add(new Word("daughter", "oyyisa"));
-        words.add(new Word("older brother", "massokka"));
-        words.add(new Word("younger brother", "temmokka"));
-        words.add(new Word("younger brother", "temmokka"));
-        words.add(new Word("younger brother", "temmokka"));
-
+        words.add(new Word("father", "lutti", R.drawable.family_father));
+        words.add(new Word("mother", "otiiko", R.drawable.family_mother));
+        words.add(new Word("son", "tolookosu", R.drawable.family_son));
+        words.add(new Word("daughter", "oyyisa", R.drawable.family_daughter));
+        words.add(new Word("older brother", "massokka", R.drawable.family_older_brother));
+        words.add(new Word("younger brother", "temmokka", R.drawable.family_younger_brother));
 
         WordAdapter adapter= new WordAdapter(this, words);
 
